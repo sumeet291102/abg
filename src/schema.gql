@@ -1,0 +1,48 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Location_charge_detail {
+  fee_mnemonic_code: String!
+  fee_carclass_code: String!
+  fee_sub_carclass_code: String!
+  fee_amount: Float!
+  fee_percent: Float!
+}
+
+type Location_charge_display {
+  fee_mnemonic_code: String!
+  fee_carclass_code: String!
+  fee_sub_carclass_code: String!
+  fee_description: String!
+  fee_identifier: String!
+}
+
+type Location_charge_indicator {
+  indicator_name: String!
+  group_name: String!
+  indicator_value: String!
+}
+
+type Location_charge_information {
+  accounting_station_number: String!
+  accounting_function: String!
+  accounting_brand: String!
+  surcharge_date: String!
+  underage_fee_date: String!
+}
+
+type Charge_information {
+  location_charge_details: [Location_charge_detail!]!
+  location_charge_displays: [Location_charge_display!]!
+  location_charge_indicators: [Location_charge_indicator!]!
+  location_charge_informations: [Location_charge_information!]!
+  location_charge_detail: [Location_charge_detail!]!
+  location_charge_display: [Location_charge_display!]!
+  location_charge_indicator: [Location_charge_indicator!]!
+  location_charge_information: [Location_charge_information!]!
+}
+
+type Query {
+  charge_information: Charge_information!
+}
